@@ -1,0 +1,463 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Redeem Hub - Codigos Roblox</title>
+    <meta name="description" content="Codigos ativos e expirados de Roblox e jogos populares com busca rapida e botao copiar." />
+    <style>
+      :root {
+        color-scheme: dark;
+        --ink: #070914;
+        --panel: #10131f;
+        --line: #24293a;
+        --text: #f7f8ff;
+        --muted: rgba(247, 248, 255, .64);
+        --acid: #67f8c4;
+        --shock: #7c5cff;
+      }
+
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: var(--text);
+        background:
+          radial-gradient(circle at 14% 8%, rgba(103, 248, 196, .13), transparent 25rem),
+          radial-gradient(circle at 90% 16%, rgba(124, 92, 255, .16), transparent 24rem),
+          linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px),
+          var(--ink);
+        background-size: auto, auto, 38px 38px, 38px 38px, auto;
+      }
+
+      header {
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        border-bottom: 1px solid rgba(255,255,255,.1);
+        background: rgba(7, 9, 20, .88);
+        backdrop-filter: blur(18px);
+      }
+
+      .wrap {
+        width: min(1120px, calc(100% - 32px));
+        margin: 0 auto;
+      }
+
+      .topbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 12px 0;
+      }
+
+      .brand {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: 950;
+        letter-spacing: 0;
+      }
+
+      .mark {
+        display: grid;
+        place-items: center;
+        width: 36px;
+        height: 36px;
+        border-radius: 8px;
+        background: var(--acid);
+        color: var(--ink);
+        font-weight: 950;
+      }
+
+      .pill {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        border: 1px solid rgba(103, 248, 196, .22);
+        background: rgba(103, 248, 196, .1);
+        color: var(--acid);
+        padding: 8px 12px;
+        border-radius: 8px;
+        font-size: 14px;
+        font-weight: 800;
+      }
+
+      .hero {
+        display: grid;
+        gap: 24px;
+        padding: 32px 0 22px;
+      }
+
+      h1 {
+        max-width: 760px;
+        margin: 14px 0 10px;
+        font-size: clamp(38px, 7vw, 68px);
+        line-height: .94;
+        letter-spacing: 0;
+      }
+
+      .lead {
+        max-width: 680px;
+        margin: 0;
+        color: var(--muted);
+        font-size: 18px;
+        line-height: 1.55;
+      }
+
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 8px;
+        padding: 12px;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        background: rgba(255,255,255,.045);
+      }
+
+      .stat {
+        min-width: 0;
+        padding: 12px;
+        border-radius: 8px;
+        background: rgba(7, 9, 20, .72);
+      }
+
+      .stat small {
+        display: block;
+        color: rgba(255,255,255,.48);
+        margin-bottom: 4px;
+      }
+
+      .stat strong {
+        font-size: 18px;
+      }
+
+      .search {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin: 8px 0 20px;
+        padding: 10px 12px;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        background: rgba(16, 19, 31, .86);
+        box-shadow: 0 0 45px rgba(103, 248, 196, .12);
+      }
+
+      input {
+        width: 100%;
+        height: 42px;
+        border: 0;
+        outline: 0;
+        background: transparent;
+        color: var(--text);
+        font-size: 16px;
+      }
+
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px;
+        padding-bottom: 40px;
+      }
+
+      .card {
+        overflow: hidden;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 10px;
+        background: rgba(255,255,255,.045);
+        cursor: pointer;
+        transition: transform .18s ease, border-color .18s ease, background .18s ease;
+      }
+
+      .card:hover {
+        transform: translateY(-2px);
+        border-color: rgba(103, 248, 196, .45);
+        background: rgba(255,255,255,.07);
+      }
+
+      .banner {
+        position: relative;
+        display: grid;
+        min-height: 136px;
+        place-items: end start;
+        padding: 12px;
+        background: linear-gradient(135deg, var(--tone), #151827 58%, #070914);
+      }
+
+      .count {
+        border-radius: 7px;
+        background: rgba(7, 9, 20, .78);
+        padding: 6px 9px;
+        color: var(--acid);
+        font-size: 12px;
+        font-weight: 900;
+      }
+
+      .body {
+        padding: 15px;
+      }
+
+      .cat {
+        color: rgba(255,255,255,.46);
+        font-size: 12px;
+        font-weight: 900;
+        text-transform: uppercase;
+      }
+
+      h2 {
+        margin: 5px 0 8px;
+        font-size: 20px;
+      }
+
+      .desc {
+        margin: 0;
+        color: var(--muted);
+        font-size: 14px;
+        line-height: 1.45;
+      }
+
+      .drawer {
+        display: none;
+        margin: 0 auto 48px;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 12px;
+        background: rgba(255,255,255,.045);
+        overflow: hidden;
+      }
+
+      .drawer.open { display: grid; }
+
+      .game-head {
+        display: grid;
+        grid-template-columns: .9fr 1.1fr;
+        gap: 18px;
+        padding: 16px;
+      }
+
+      .big-banner {
+        min-height: 230px;
+        border-radius: 10px;
+        background: linear-gradient(135deg, var(--tone), #151827 58%, #070914);
+      }
+
+      .codes {
+        display: grid;
+        gap: 18px;
+      }
+
+      .code-list h3 {
+        margin: 0 0 10px;
+        font-size: 20px;
+      }
+
+      .code-row {
+        display: grid;
+        grid-template-columns: 1fr auto;
+        align-items: center;
+        gap: 10px;
+        margin-bottom: 8px;
+        padding: 11px;
+        border: 1px solid rgba(255,255,255,.1);
+        border-radius: 9px;
+        background: rgba(7, 9, 20, .52);
+      }
+
+      code {
+        display: inline-block;
+        border: 1px solid rgba(103, 248, 196, .3);
+        border-radius: 7px;
+        background: rgba(103, 248, 196, .1);
+        padding: 6px 8px;
+        color: var(--acid);
+        font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+        font-weight: 900;
+      }
+
+      .reward {
+        margin-top: 7px;
+        color: rgba(255,255,255,.72);
+        font-size: 14px;
+      }
+
+      button {
+        min-width: 96px;
+        height: 40px;
+        border: 0;
+        border-radius: 8px;
+        background: var(--acid);
+        color: var(--ink);
+        font-weight: 950;
+        cursor: pointer;
+      }
+
+      .faq {
+        border-top: 1px solid rgba(255,255,255,.1);
+        padding: 16px;
+      }
+
+      details {
+        margin-top: 8px;
+        border-radius: 8px;
+        background: rgba(7, 9, 20, .64);
+        padding: 12px;
+      }
+
+      details p {
+        margin: 8px 0 0;
+        color: var(--muted);
+      }
+
+      @media (min-width: 860px) {
+        .hero {
+          grid-template-columns: 1.08fr .92fr;
+          align-items: end;
+        }
+      }
+
+      @media (max-width: 820px) {
+        .grid { grid-template-columns: repeat(2, 1fr); }
+        .game-head { grid-template-columns: 1fr; }
+      }
+
+      @media (max-width: 560px) {
+        .wrap { width: min(100% - 24px, 1120px); }
+        .grid { grid-template-columns: 1fr; }
+        .stats { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+        .stat { padding: 10px 8px; }
+        .stat strong { font-size: 15px; }
+        .lead { font-size: 16px; }
+        .code-row { grid-template-columns: 1fr; }
+        button { width: 100%; }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap topbar">
+        <div class="brand"><span class="mark">R</span> Redeem Hub</div>
+        <span class="pill">Seguro</span>
+      </div>
+    </header>
+
+    <main class="wrap">
+      <section class="hero">
+        <div>
+          <span class="pill">Codigos atualizados por status</span>
+          <h1>Codigos Roblox sem enrolacao.</h1>
+          <p class="lead">Veja jogos populares, copie codigos ativos em um toque e confira expirados sem precisar passar por textos enormes.</p>
+        </div>
+        <div class="stats">
+          <div class="stat"><small>Jogos</small><strong>9</strong></div>
+          <div class="stat"><small>Ativos</small><strong>7</strong></div>
+          <div class="stat"><small>Update</small><strong>15 mai</strong></div>
+        </div>
+      </section>
+
+      <label class="search">
+        <span>Pesquisar</span>
+        <input id="search" placeholder="Digite jogo ou codigo..." autocomplete="off" />
+      </label>
+
+      <section class="grid" id="games"></section>
+      <section class="drawer" id="drawer"></section>
+    </main>
+
+    <script>
+      const games = [
+        ["blox-fruits", "Blox Fruits", "Roblox RPG", "Codigos de XP, reset de atributos e dinheiro para evoluir mais rapido.", "#67f8c4"],
+        ["blue-lock-rivals", "Blue Lock Rivals", "Roblox Esporte", "Spins, boosts e recompensas para partidas inspiradas em anime.", "#7c5cff"],
+        ["anime-vanguards", "Anime Vanguards", "Roblox Anime", "Codigos para gemas, rerolls e itens de progressao.", "#ffbf47"],
+        ["pet-simulator", "Pet Simulator", "Roblox Colecao", "Brindes, boosts e recompensas para colecionadores.", "#38bdf8"],
+        ["blade-ball", "Blade Ball", "Roblox Acao", "Codigos de spins, moedas e itens para partidas rapidas.", "#f97316"],
+        ["fisch", "Fisch", "Roblox Simulador", "Recompensas para pesca, iscas e progresso.", "#22d3ee"],
+        ["grow-a-garden", "Grow a Garden", "Roblox Casual", "Codigos para sementes, moedas e boosts de jardim.", "#84cc16"],
+        ["brookhaven", "Brookhaven", "Roblox Roleplay", "Itens promocionais e recompensas quando disponiveis.", "#ec4899"],
+        ["king-legacy", "King Legacy", "Roblox RPG", "Codigos para gemas, beli, reset e XP.", "#eab308"]
+      ];
+
+      const codes = {
+        "blox-fruits": [
+          ["starcodeheo", "2x XP por tempo limitado", "active"],
+          ["EASTEREXP", "2x XP", "active"],
+          ["KITT_RESET", "Reset de atributos", "active"]
+        ],
+        "blue-lock-rivals": [
+          ["44PANTHER", "5 Lucky Spins", "active"],
+          ["CHIGIRIHERE", "5 Lucky Spins e 5 Flow Spins", "active"],
+          ["OTOYAUPD", "5 Lucky Spin e 5 Flow Spin", "expired"]
+        ],
+        "anime-vanguards": [
+          ["OopsiePoopsie", "100 RR, 100 MemShards e 50K Flowers", "active"],
+          ["TooMuchPain", "100 Trait Rerolls", "active"]
+        ],
+        "blade-ball": [["2BTHANKS", "Spin gratis", "expired"]],
+        "king-legacy": [["UPDATE6", "Gemas", "expired"]]
+      };
+
+      const grid = document.querySelector("#games");
+      const drawer = document.querySelector("#drawer");
+      const search = document.querySelector("#search");
+
+      function renderCards(term = "") {
+        const filtered = games.filter((game) => game.join(" ").toLowerCase().includes(term.toLowerCase()));
+        grid.innerHTML = filtered.map((game) => {
+          const active = (codes[game[0]] || []).filter((code) => code[2] === "active").length;
+          return `<article class="card" style="--tone:${game[4]}" onclick="openGame('${game[0]}')">
+            <div class="banner"><span class="count">${active} ativos</span></div>
+            <div class="body">
+              <div class="cat">${game[2]}</div>
+              <h2>${game[1]}</h2>
+              <p class="desc">${game[3]}</p>
+            </div>
+          </article>`;
+        }).join("");
+      }
+
+      function codeRows(slug, status) {
+        const list = (codes[slug] || []).filter((code) => code[2] === status);
+        if (!list.length) return `<p class="desc">Nenhum codigo ${status === "active" ? "ativo" : "expirado"} registrado agora.</p>`;
+        return list.map((code) => `<div class="code-row">
+          <div><code>${code[0]}</code><div class="reward">${code[1]}</div></div>
+          <button onclick="copyCode('${code[0]}', this)">Copiar</button>
+        </div>`).join("");
+      }
+
+      function openGame(slug) {
+        const game = games.find((item) => item[0] === slug);
+        drawer.classList.add("open");
+        drawer.style.setProperty("--tone", game[4]);
+        drawer.innerHTML = `<div class="game-head">
+          <div class="big-banner"></div>
+          <div class="codes">
+            <div>
+              <div class="cat">${game[2]}</div>
+              <h2>${game[1]}</h2>
+              <p class="desc">${game[3]}</p>
+              <p class="desc">Ultima atualizacao: 15 mai. 2026, 12:00</p>
+            </div>
+            <div class="code-list"><h3>Codigos ativos</h3>${codeRows(slug, "active")}</div>
+            <div class="code-list"><h3>Codigos expirados</h3>${codeRows(slug, "expired")}</div>
+          </div>
+        </div>
+        <div class="faq">
+          <h3>FAQ rapido</h3>
+          <details open><summary>Como resgatar?</summary><p>Abra o jogo, procure o menu de codigos, cole o codigo e confirme.</p></details>
+          <details><summary>Os codigos sao automaticos?</summary><p>A versao Next.js incluida tem endpoint de cron, Supabase e historico de atualizacao.</p></details>
+        </div>`;
+        drawer.scrollIntoView({ behavior: "smooth", block: "start" });
+      }
+
+      async function copyCode(code, button) {
+        await navigator.clipboard.writeText(code);
+        button.textContent = "Copiado";
+        setTimeout(() => button.textContent = "Copiar", 1200);
+      }
+
+      search.addEventListener("input", (event) => renderCards(event.target.value));
+      renderCards();
+    </script>
+  </body>
+</html>
