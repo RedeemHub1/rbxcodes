@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="King Legacy banner">
-  <rect width="1200" height="630" fill="#111827"/>
-  <circle cx="950" cy="160" r="190" fill="#eab308" opacity=".26"/>
-  <path d="M690 460 L760 220 L855 385 L950 220 L1020 460 Z" fill="#eab308" opacity=".22"/>
-  <text x="72" y="315" fill="#f7f8ff" font-family="Arial, sans-serif" font-size="86" font-weight="900">King Legacy</text>
-  <text x="76" y="380" fill="#eab308" font-family="Arial, sans-serif" font-size="34" font-weight="700">RPG Codes</text>
-</svg>

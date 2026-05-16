@@ -1,8 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Blade Ball banner">
-  <rect width="1200" height="630" fill="#111827"/>
-  <circle cx="915" cy="310" r="170" fill="#f97316" opacity=".28"/>
-  <path d="M650 120 L1010 500" stroke="#f97316" stroke-width="38" stroke-linecap="round" opacity=".35"/>
-  <path d="M705 510 L1035 150" stroke="#67f8c4" stroke-width="18" stroke-linecap="round" opacity=".22"/>
-  <text x="72" y="315" fill="#f7f8ff" font-family="Arial, sans-serif" font-size="86" font-weight="900">Blade Ball</text>
-  <text x="76" y="380" fill="#f97316" font-family="Arial, sans-serif" font-size="34" font-weight="700">Action Codes</text>
-</svg>

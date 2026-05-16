@@ -1,7 +1,0 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Fisch banner">
-  <rect width="1200" height="630" fill="#111827"/>
-  <circle cx="945" cy="165" r="190" fill="#22d3ee" opacity=".24"/>
-  <path d="M0 420 C170 370 260 470 430 420 C640 350 760 490 960 410 C1070 365 1130 340 1200 360 L1200 630 L0 630 Z" fill="#22d3ee" opacity=".18"/>
-  <text x="72" y="325" fill="#f7f8ff" font-family="Arial, sans-serif" font-size="96" font-weight="900">Fisch</text>
-  <text x="76" y="390" fill="#22d3ee" font-family="Arial, sans-serif" font-size="34" font-weight="700">Simulator Codes</text>
-</svg>
