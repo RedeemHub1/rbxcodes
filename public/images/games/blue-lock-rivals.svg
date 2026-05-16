@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Blue Lock Rivals banner">
+  <rect width="1200" height="630" fill="#111827"/>
+  <circle cx="980" cy="160" r="190" fill="#7c5cff" opacity=".3"/>
+  <circle cx="150" cy="520" r="210" fill="#38bdf8" opacity=".18"/>
+  <path d="M95 500 L390 130 L670 500 Z" fill="#7c5cff" opacity=".18"/>
+  <text x="72" y="300" fill="#f7f8ff" font-family="Arial, sans-serif" font-size="80" font-weight="900">Blue Lock</text>
+  <text x="76" y="370" fill="#7c5cff" font-family="Arial, sans-serif" font-size="52" font-weight="900">Rivals</text>
+</svg>

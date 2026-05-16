@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-label="Blox Fruits banner">
+  <rect width="1200" height="630" fill="#111827"/>
+  <circle cx="930" cy="110" r="170" fill="#67f8c4" opacity=".22"/>
+  <circle cx="160" cy="560" r="230" fill="#7c5cff" opacity=".18"/>
+  <path d="M0 470 C220 390 360 520 590 430 C790 350 930 390 1200 300 L1200 630 L0 630 Z" fill="#67f8c4" opacity=".16"/>
+  <text x="72" y="315" fill="#f7f8ff" font-family="Arial, sans-serif" font-size="86" font-weight="900">Blox Fruits</text>
+  <text x="76" y="380" fill="#67f8c4" font-family="Arial, sans-serif" font-size="34" font-weight="700">Roblox RPG Codes</text>
+</svg>
