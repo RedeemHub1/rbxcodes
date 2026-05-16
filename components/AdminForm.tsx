@@ -32,7 +32,7 @@ export function AdminForm() {
         <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="name" placeholder="Nome do jogo" required />
         <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="slug" placeholder="url-amigavel" required />
         <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="category" placeholder="Categoria" required />
-        <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="imageUrl" placeholder="URL da imagem/banner" required />
+        <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="imageUrl" placeholder="/images/games/banner.svg" required />
         <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="accent" placeholder="#67f8c4" required />
         <input className="rounded-md border border-white/10 bg-ink px-3 py-3 outline-none focus:border-acid" name="popularityRank" placeholder="Ranking" type="number" required />
       </div>

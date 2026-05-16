@@ -3,6 +3,27 @@ import { getSupabaseAdmin, getSupabasePublic } from "@/lib/supabase";
 import type { Game, PromoCode, UpdateLog } from "@/lib/types";
 import { normalizeCode } from "@/lib/utils";
 
+const localGameImages: Record<string, string> = {
+  "blox-fruits": "/images/games/blox-fruits.svg",
+  "blue-lock-rivals": "/images/games/blue-lock-rivals.svg",
+  "anime-vanguards": "/images/games/anime-vanguards.svg",
+  "pet-simulator": "/images/games/pet-simulator.svg",
+  "blade-ball": "/images/games/blade-ball.svg",
+  fisch: "/images/games/fisch.svg",
+  "grow-a-garden": "/images/games/grow-a-garden.svg",
+  brookhaven: "/images/games/brookhaven.svg",
+  "king-legacy": "/images/games/king-legacy.svg"
+};
+
+function isPublicGameImage(value: unknown) {
+  return typeof value === "string" && /^\/images\/games\/[a-z0-9-]+\.(svg|png|jpg|jpeg|webp)$/i.test(value);
+}
+
+function resolveGameImage(slug: string, imageUrl: unknown) {
+  if (isPublicGameImage(imageUrl)) return imageUrl;
+  return localGameImages[slug] ?? "/images/games/blox-fruits.svg";
+}
+
 function byRank(a: Game, b: Game) {
   return a.popularityRank - b.popularityRank;
 }
@@ -111,13 +132,15 @@ export async function createUpdateLog(log: Omit<UpdateLog, "id" | "createdAt">) 
 }
 
 function mapGame(item: any): Game {
+  const imageUrl = resolveGameImage(item.slug, item.image_url);
+
   return {
     id: item.id,
     slug: item.slug,
     name: item.name,
     category: item.category,
     description: item.description,
-    imageUrl: item.image_url,
+    imageUrl,
     accent: item.accent,
     isFeatured: item.is_featured,
     popularityRank: item.popularity_rank,

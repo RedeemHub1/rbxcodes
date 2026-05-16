@@ -8,7 +8,9 @@ const schema = z.object({
   slug: z.string().min(2).max(90).regex(/^[a-z0-9-]+$/),
   category: z.string().min(2).max(60),
   description: z.string().min(8).max(220),
-  imageUrl: z.string().url(),
+  imageUrl: z.string().regex(/^\/images\/games\/[a-z0-9-]+\.(svg|png|jpg|jpeg|webp)$/i, {
+    message: "Use a public path like /images/games/banner.svg."
+  }),
   accent: z.string().regex(/^#[0-9a-fA-F]{6}$/),
   popularityRank: z.coerce.number().int().positive()
 });

@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import Image from "next/image";
 import { notFound } from "next/navigation";
 import { AdSlot } from "@/components/AdSlot";
 import { CodeList } from "@/components/CodeList";
+import { GameImage } from "@/components/GameImage";
 import { getCodes, getGame, getGames } from "@/lib/data";
 import { formatDate, siteUrl } from "@/lib/utils";
 
@@ -73,7 +73,7 @@ export default async function GamePage({ params }: Props) {
       <section className="grid gap-5 lg:grid-cols-[0.85fr_1.15fr] lg:items-start">
         <div className="overflow-hidden rounded-lg border border-white/10 bg-white/[0.045]">
           <div className="relative aspect-[16/9]">
-            <Image src={game.imageUrl} alt={`Banner de ${game.name}`} fill priority sizes="(max-width: 1024px) 100vw, 42vw" className="object-cover" />
+            <GameImage src={game.imageUrl} slug={game.slug} alt={`Banner de ${game.name}`} />
           </div>
           <div className="space-y-2 p-4">
             <p className="text-xs font-bold uppercase text-acid">{game.category}</p>
