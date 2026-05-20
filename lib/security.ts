@@ -12,12 +12,26 @@ export function assertAdmin(request: NextRequest) {
   return Boolean(expected && received && received === expected);
 }
 
-export function assertCron(request: NextRequest) {
+export type CronAuthResult =
+  | { ok: true; source: "authorization" | "x-cron-secret" | "query" }
+  | { ok: false; reason: "missing_env" | "missing_token" | "token_mismatch" };
+
+export function verifyCronAuth(request: NextRequest): CronAuthResult {
   const expected = process.env.CRON_SECRET;
   const auth = request.headers.get("authorization");
-  const bearer = auth?.startsWith("Bearer ") ? auth.slice(7) : null;
-  const received = request.headers.get("x-cron-secret") || bearer || request.nextUrl.searchParams.get("secret");
-  return Boolean(expected && received && received === expected);
+  const bearer = auth?.toLowerCase().startsWith("bearer ") ? auth.slice(7).trim() : null;
+  const headerSecret = request.headers.get("x-cron-secret")?.trim() || null;
+  const querySecret = request.nextUrl.searchParams.get("secret")?.trim() || null;
+
+  if (!expected) return { ok: false, reason: "missing_env" };
+
+  const received = headerSecret ?? bearer ?? querySecret;
+  if (!received) return { ok: false, reason: "missing_token" };
+  if (received !== expected) return { ok: false, reason: "token_mismatch" };
+
+  if (headerSecret) return { ok: true, source: "x-cron-secret" };
+  if (bearer) return { ok: true, source: "authorization" };
+  return { ok: true, source: "query" };
 }
 
 export function rateLimit(request: NextRequest, limit = 40, windowMs = 60_000) {
