@@ -171,9 +171,23 @@ export async function upsertCodes(codes: Array<Pick<PromoCode, "gameSlug" | "cod
     first_seen_at: now
   }));
 
-  const { error } = await supabase.from("codes").upsert(payload, { onConflict: "game_slug,code" });
-  if (error) throw error;
-  return { inserted: payload.length, skipped: 0 };
+const { data, error } = await supabase
+  .from("codes")
+  .upsert(payload, { onConflict: "game_slug,code" })
+  .select();
+
+console.log("[upsertCodes]", {
+  payloadCount: payload.length,
+  insertedData: data,
+  error
+});
+
+if (error) throw error;
+
+return {
+  inserted: data?.length ?? 0,
+  skipped: 0
+};
 }
 
 export async function createUpdateLog(log: Omit<UpdateLog, "id" | "createdAt">) {
