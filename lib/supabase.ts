@@ -7,6 +7,12 @@ const serviceKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
 export const hasSupabase = Boolean(supabaseUrl && (anonKey || serviceKey));
 
 export function getSupabaseAdmin() {
+  console.log("[SUPABASE ADMIN DEBUG]", {
+    hasUrl: Boolean(supabaseUrl),
+    hasServiceKey: Boolean(serviceKey),
+    serviceKeyStart: serviceKey?.slice(0, 15)
+  });
+
   if (!supabaseUrl || !serviceKey) return null;
 
   return createClient(supabaseUrl, serviceKey, {
